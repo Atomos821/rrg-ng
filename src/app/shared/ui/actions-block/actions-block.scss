@@ -1,0 +1,52 @@
+@use "mixins" as m;
+
+:host {
+    align-items: center;
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+
+    @include m.below-small {
+        height: auto;
+        flex-direction: column;
+        gap: 2rem;
+        padding: 2rem 0;
+    }
+
+    &>div {
+        align-items: center;
+        border-radius: .5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 2rem 3rem;
+        gap: 1rem;
+        width: 30vh;
+        z-index: 1;
+
+        @include m.glass-surface(.2, 4px);
+        @include m.glass-border(1,1,1,1);
+
+        div {
+            &:first-child {
+                @include m.text-title;
+            }
+
+            &:last-child {
+                @include m.text-body;
+            }
+        }
+
+
+    }
+}
+
+app-particles-background {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    // top: 0;
+}
