@@ -1,0 +1,30 @@
+section {
+    position: relative;
+    height: 100%;
+    width: 100%;
+
+    .hero-image {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        margin: 0 auto;
+        z-index: -1;
+    }
+
+    .hero-content {
+        background-color: red;
+        bottom: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+        position: absolute;
+        height: fit-content;
+        left: 1.5rem;
+        padding: 1rem 2rem;
+
+        h1, h2 {
+            margin: 0;
+        }
+    }
+}
