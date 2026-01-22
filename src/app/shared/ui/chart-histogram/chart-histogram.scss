@@ -1,0 +1,12 @@
+@use 'mixins' as m;
+
+section {
+    padding: 1rem 2rem;
+
+    @include m.glass-surface;
+}
+
+h4 {
+    font-size: 1rem;
+    margin: 0;
+}
