@@ -1,2 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+@use "variables" as v;
+
 @import 'normalize.css';
+
+html {
+    font-family: v.$base-font-family;
+    font-size: v.$base-font-size;
+    scrollbar-width: smooth;
+}
+
+body {
+    background-color: v.$background-color;
+    color: v.$color;
+}
