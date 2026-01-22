@@ -9,11 +9,11 @@ section {
         flex-direction: column;
         height: 100%;
         margin: 0 auto;
+        pointer-events: none;
         z-index: -1;
     }
 
     .hero-content {
-        background-color: red;
         bottom: 1.5rem;
         display: flex;
         flex-direction: column;
@@ -25,6 +25,11 @@ section {
 
         h1, h2 {
             margin: 0;
+        }
+
+        h1 {
+            text-transform: uppercase;
+            font-size: 6rem;
         }
     }
 }
