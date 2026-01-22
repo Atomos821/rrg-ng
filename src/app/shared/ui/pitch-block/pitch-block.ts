@@ -1,9 +1,9 @@
 import { ChangeDetectionStrategy, Component, input } from '@angular/core';
-import { NgClass } from '@angular/common';
+import { NgClass, NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'app-pitch-block',
-  imports: [NgClass],
+  imports: [NgClass, NgOptimizedImage],
   templateUrl: './pitch-block.html',
   styleUrl: './pitch-block.scss',
   changeDetection: ChangeDetectionStrategy.OnPush

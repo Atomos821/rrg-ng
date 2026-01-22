@@ -1,19 +1,19 @@
-<section>
+<section [ngClass]="contentAlign() === 'left' ? 'left' : 'right'">
     <div class="pitch-image">
         <img
-            [src]="imageSrc()"
-            [alt]="imageAlt()" />
+            [ngSrc]="imageSrc()"
+            [alt]="imageAlt()"
+            fill
+            priority />
     </div>
 
-    <div
-        class="pitch-content"
-        [ngClass]="contentAlign() === 'left' ? 'left' : 'right'">
+    <div class="pitch-content">
         @if (overText()) {
-            <div>{{ overText() }}</div>
+            <div class="over-text">{{ overText() }}</div>
         }
 
-        <div>{{ title() }}</div>
-        <div>
+        <div class="title-text">{{ title() }}</div>
+        <div class="content-text">
             <ng-content />
         </div>
     </div>
