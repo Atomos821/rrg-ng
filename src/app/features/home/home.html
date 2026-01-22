@@ -6,7 +6,7 @@
 
 <app-text-block
     overText="Finally something different from Conflict"
-    text="A dynamic PVPVE gamemode for Arma Reforger" />
+    [text]="['DYNAMIC PvPvE', 'GAMEMODE FOR', 'ARMA REFORGER']" />
 
 <app-pitch-block
     contentAlign="right"
@@ -14,30 +14,43 @@
     title="Ligne de Front"
     imageSrc="images/dummy01.jpg"
     imageAlt="">
-    Redline transforme l'île en un théâtre de guerre total. Votre objectif : faire progresser physiquement la ligne de
-    front pour repousser l'adversaire. La coordination tactique est cruciale pour sécuriser les secteurs. Chaque mètre
-    gagné modifie la dynamique du combat et rapproche votre faction de la victoire finale.
+    <p>Redline transforme l'île en un théâtre de guerre total.</p>
+    <p>
+        Votre objectif : faire progresser physiquement la ligne de front pour repousser l'adversaire. La coordination
+        tactique est cruciale pour sécuriser les secteurs.
+    </p>
+    <p>Chaque mètre gagné modifie la dynamique du combat et rapproche votre faction de la victoire finale.</p>
 </app-pitch-block>
 
 <app-pitch-block
     contentAlign="left"
-    overText="Le véritable nerf de la guerre"
+    overText="Nerf de la guerre"
     title="Logistique Vitale"
     imageSrc="images/dummy02.jpg"
     imageAlt="">
-    La puissance de feu ne suffit pas ; la gestion des ressources est la clé. Établissez une chaîne logistique pour
-    acheminer munitions et matériaux vers le front. Déployez des bases avancées (FOB) pour soutenir l'offensive. Sans
-    une intendance rigoureuse, l'attaque s'essoufflera rapidement face à l'ennemi.
+    <p>La puissance de feu ne suffit pas ; la gestion des ressources est la clé.</p>
+    <p>
+        Établissez une chaîne logistique pour acheminer munitions et matériaux vers le front. Déployez des bases
+        avancées pour soutenir votre offensive.
+    </p>
+    <p>Sans une logistique rigoureuse, l'attaque s'essoufflera rapidement face à l'ennemi.</p>
 </app-pitch-block>
 
 <app-pitch-block
-    overText="Un classique, sublimé par Enfusion"
+    overText="Un classique, porté sur Enfusion"
     title="Nouvelle Génération"
     imageSrc="images/dummy03.jpg"
     imageAlt="">
-    Retrouvez le mode légendaire de la Red Roosters Gaming, sublimé par le moteur Enfusion. Profitez d'une communication
-    radio immersive, d'une physique réaliste et d'une fluidité inédite. Ce retour offre une expérience visuelle et
-    technique modernisée, idéale pour les vétérans comme pour les nouvelles recrues sur Reforger.
+    <p>Retrouvez le mode légendaire de la Red Roosters Gaming, sublimé par le moteur Enfusion.</p>
+    <p>
+        Profitez d'une communication radio immersive, d'une physique réaliste et d'une fluidité inédite. Ce retour
+        offre une expérience visuelle et technique modernisée, idéale pour les vétérans comme pour les nouvelles recrues
+        sur Reforger.
+    </p>
 </app-pitch-block>
 
-<app-actions-block />
+<app-actions-block>
+    <div>Action 1</div>
+    <div>Action 2</div>
+    <div>Action 3</div>
+</app-actions-block>
