@@ -7,13 +7,17 @@
             priority />
     </div>
 
-    <div class="pitch-content">
-        @if (overText()) {
-            <div class="over-text">{{ overText() }}</div>
-        }
+    <div
+        class="pitch-content"
+        [ngClass]="glassTint() === 'clear' ? 'clear' : 'dark'">
+        <div class="content-headings">
+            @if (overText()) {
+                <div class="over-text unbounded">{{ overText() }}</div>
+            }
+            <div class="title-text unbounded">{{ title() }}</div>
+        </div>
 
-        <div class="title-text">{{ title() }}</div>
-        <div class="content-text">
+        <div class="content-text inter-400">
             <ng-content />
         </div>
     </div>

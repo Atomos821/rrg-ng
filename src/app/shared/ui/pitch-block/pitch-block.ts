@@ -10,6 +10,7 @@ import { NgClass, NgOptimizedImage } from '@angular/common';
 })
 export class PitchBlock {
   contentAlign = input<'left' | 'right'>('right');
+  glassTint = input<'clear' | 'dark'>('dark');
   overText = input<string>();
   title = input.required<string>();
   imageSrc = input.required<string>();
