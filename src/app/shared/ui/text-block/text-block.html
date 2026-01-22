@@ -1,9 +1,17 @@
 <div>
     @if (overText()) {
-        <div class="over-text">{{ overText() }}</div>
+        <div class="over-text unbounded">{{ overText() }}</div>
     }
 
-    <div class="content-text">{{ text() }}</div>
+    <div class="content-text unbounded">
+        @if (typeof text() === "string") {
+            {{ text() }}
+        } @else if (isArray(text())) {
+            @for (part of text(); track $index) {
+                <div>{{ part }}&nbsp;</div>
+            }
+        }
+    </div>
 
     @if (underText()) {
         <div class="under-text">{{ underText() }}</div>

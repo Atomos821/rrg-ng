@@ -1,5 +1,11 @@
-:host > div {
+@use 'mixins' as m;
+
+:host>div {
     padding: 8rem 1.5rem;
+
+    @include m.below-small {
+        padding: 6rem 1.5rem;
+    }
 }
 
 .over-text {
@@ -10,12 +16,42 @@
     text-transform: uppercase;
 }
 
+.over-text {
+    font-size: 1rem;
+
+    @include m.below-small {
+        font-size: .75rem;
+    }
+}
+
 .content-text {
     font-size: 8rem;
     font-weight: 700;
-    letter-spacing: -2.46px;
+    letter-spacing: -2px;
     line-height: 85%;
-    text-transform: uppercase;
+    // text-transform: uppercase;
+
+    div {
+        display: inline;
+    }
+
+    @include m.below-large {
+        font-size: 6rem;
+        line-height: 100%;
+
+        div {
+            display: block;
+        }
+    }
+
+    @include m.below-small {
+        font-size: 1.75rem;
+        // line-height: 100%;
+
+        div {
+            display: block;
+        }
+    }
 }
 
 .under-text {}
