@@ -17,7 +17,8 @@ export const routes: Routes = [
       },
       {
         path: '**',
-        redirectTo: ''
+        redirectTo: '',
+        pathMatch: 'full' // Redirects require a pathMatch
       }
     ]
   }
