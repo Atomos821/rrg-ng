@@ -10,7 +10,7 @@ describe('ChartHistogram', () => {
     await TestBed.configureTestingModule({
       imports: [ChartHistogram]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(ChartHistogram);
     component = fixture.componentInstance;

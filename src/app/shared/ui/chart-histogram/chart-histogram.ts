@@ -1,5 +1,11 @@
 import { Component, input } from '@angular/core';
-import { OverviewActivity } from '../../../features/stats/models/stats.models';
+// import { OverviewActivity } from '../../../features/stats/models/stats.models';
+
+interface Dummy {
+  day: string;
+  ai_kills: number;
+  player_kills: number;
+}
 
 @Component({
   selector: 'app-chart-histogram',
@@ -9,5 +15,6 @@ import { OverviewActivity } from '../../../features/stats/models/stats.models';
 })
 export class ChartHistogram {
   title = input<string | null>();
-  data = input.required<OverviewActivity[]>();
+  data = input.required<Dummy[]>();
+  // data = input.required<OverviewActivity[]>();
 }
