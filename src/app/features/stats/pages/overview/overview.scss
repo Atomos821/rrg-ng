@@ -1,0 +1,20 @@
+section {
+    align-items: start;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 0 auto;
+    padding: 2rem;
+    width: fit-content;
+
+    h2 {
+        margin: 0;
+    }
+
+    div {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        min-width: 50vw;
+    }
+}

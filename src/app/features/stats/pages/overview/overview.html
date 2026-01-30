@@ -1,0 +1,27 @@
+<section>
+    <h2 class="unbounded">Global Stats</h2>
+
+    <div>
+        @if (!overviewRes.isLoading()) {
+        <app-stat-card label="Unique Players" [value]="overviewRes.value()?.players_count ?? null" />
+        <app-stat-card label="Kills"
+            [value]="(overviewRes.value()?.pvp_kills ?? 0) + (overviewRes.value()?.pve_kills ?? 0)" />
+        <app-stat-card label="Deaths" [value]="overviewRes.value()?.player_deaths ?? null" />
+        <app-stat-card label="Games Played"
+            [value]="(overviewRes.value()?.victories?.us_army ?? 0) + (overviewRes.value()?.victories?.soviet_army ?? 0)" />
+        <app-stat-card label="US:RU Win Ratio %" [value]="winRate() ?? 0" />
+        <app-stat-card label="US Victories" [value]="overviewRes.value()?.victories?.us_army ?? 0" />
+        <app-stat-card label="Soviet Victories" [value]="overviewRes.value()?.victories?.soviet_army ?? 0" />
+        }
+    </div>
+</section>
+
+<section>
+    <h2 class="unbounded">Server Activity</h2>
+    <div>
+        <app-chart-histogram title="Kills per day (PC vs NPC)" [data]="[
+                { day: '2026-01-15', ai_kills: 8, player_kills: 1 },
+                { day: '2026-01-16', ai_kills: 69, player_kills: 8 },
+            ]" />
+    </div>
+</section>
