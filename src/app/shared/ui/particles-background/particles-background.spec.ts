@@ -10,7 +10,7 @@ describe('ParticlesBackground', () => {
     await TestBed.configureTestingModule({
       imports: [ParticlesBackground]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(ParticlesBackground);
     component = fixture.componentInstance;

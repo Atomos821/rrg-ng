@@ -27,9 +27,9 @@ export class ParticlesBackground implements OnInit, OnDestroy {
 
   private ctx!: CanvasRenderingContext2D;
   private particles: Particle[] = [];
-  private animationId: number = 0;
-  private width: number = 0;
-  private height: number = 0;
+  private animationId = 0;
+  private width = 0;
+  private height = 0;
   private globalAngle = 0;
 
   // Configuration de l'effet
@@ -93,7 +93,7 @@ export class ParticlesBackground implements OnInit, OnDestroy {
     return points;
   }
 
-  private generateParticle(randomY: boolean = false): Particle {
+  private generateParticle(randomY = false): Particle {
     // Distribution centrée (cloche)
     const r1 = Math.random();
     const r2 = Math.random();
