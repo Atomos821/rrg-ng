@@ -19,6 +19,10 @@ export class Overview {
     loader: () => firstValueFrom(this.statsService.getOverview())
   });
 
+  protected activityRes = resource({
+    loader: () => firstValueFrom(this.statsService.getOverviewActivityLast7Days())
+  });
+
   constructor() {
     effect(() => {
       const res = this.overviewRes.value();

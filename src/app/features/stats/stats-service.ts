@@ -27,6 +27,21 @@ export class StatsService {
     return this.http.get<ServerActivityStats>(this.host + endpoint, this.options);
   }
 
+  getOverviewActivityLast7Days(): Observable<ServerActivityStats[]> {
+    const endpoint = '/api/v1/overview/activity-last-7d';
+    return this.http.get<ServerActivityStats[]>(this.host + endpoint, this.options);
+  }
+
+  getOverviewActivityLast30Days(): Observable<ServerActivityStats[]> {
+    const endpoint = '/api/v1/overview/activity-last-30d';
+    return this.http.get<ServerActivityStats[]>(this.host + endpoint, this.options);
+  }
+
+  getOverviewActivityLast90Days(): Observable<ServerActivityStats[]> {
+    const endpoint = '/api/v1/overview/activity-last-90d';
+    return this.http.get<ServerActivityStats[]>(this.host + endpoint, this.options);
+  }
+
   getOverviewLastKills(): Observable<KillPublic[]> {
     const endpoint = '/api/v1/overview/last-kills';
     return this.http.get<KillPublic[]>(this.host + endpoint, this.options);
