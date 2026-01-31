@@ -19,9 +19,7 @@
 <section>
     <h2 class="unbounded">Server Activity</h2>
     <div>
-        <app-chart-histogram title="Kills per day (PC vs NPC)" [data]="[
-                { day: '2026-01-15', ai_kills: 8, player_kills: 1 },
-                { day: '2026-01-16', ai_kills: 69, player_kills: 8 },
-            ]" />
+        <!-- <app-chart-histogram title="Kills per day (PC vs NPC)" [data]="killsPerDay()" /> -->
+        <app-chart-line title="Kills per day (PvP vs PvE)" [data]="killsPerDay()" />
     </div>
 </section>
