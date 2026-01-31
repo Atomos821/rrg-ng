@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { OverviewStats, PlayerPublic, KillPublic, ServerActivityStats } from './models/stats.models';
+import { PaginatedResponse } from '../../core/models/pagination';
 import { environment } from '../../../environments/environment';
 
 @Injectable({
@@ -47,9 +48,9 @@ export class StatsService {
     return this.http.get<KillPublic[]>(this.host + endpoint, this.options);
   }
 
-  getPlayers(): Observable<PlayerPublic[]> {
-    const endpoint = '/api/v1/player/';
-    return this.http.get<PlayerPublic[]>(this.host + endpoint, this.options);
+  getPlayers(page: number = 1, size: number = 10): Observable<PaginatedResponse<PlayerPublic>> {
+    const endpoint = `/api/v1/player/?skip=${(page - 1) * size}&limit=${size}`;
+    return this.http.get<PaginatedResponse<PlayerPublic>>(this.host + endpoint, this.options);
   }
 
   getPlayer(id: number): Observable<PlayerPublic> {
